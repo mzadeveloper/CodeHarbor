@@ -2,11 +2,248 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 1150px;
+}
+
+/* Main Banner css */
+.bgImg_banner {
+  background-image: url("../src/Images/Home/Banner-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg_white {
+  background-color: #fff;
+}
+.topLogo img {
+  width: 200px;
+}
+
+.bg_blue {
+  background-color: #1a56db !important;
+}
+
+.blueColor {
+  color: #0070ba !important;
+}
+.lineIcon {
+  position: absolute;
+  left: 70%;
+}
+.blackColor {
+  color: #000 !important;
+}
+.whatsAppCover img {
+  margin-top: 6px;
+}
+.whiteColor {
+  color: #fff !important;
+}
+
+.bg_blue {
+  background-color: #0070ba !important;
+}
+
+.bg_black {
+  background-color: #202020;
+}
+
+.navMenu {
+  background-color: #fff;
+}
+
+.navMenu a {
+  padding: 15px 6px;
+  border-bottom: 3px solid transparent;
+  font-weight: 700;
+}
+
+.navMenu a:hover {
+  border-bottom: 3px solid #0070ba;
+}
+
+.topPageLink {
+  margin-top: 50px;
+}
+
+.top_Contactbtn {
+  padding: 15px;
+  background-color: #0070ba;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.companyName h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 45px;
+  margin-bottom: 25px;
+}
+
+.companyName h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.companyName p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #cccdce;
+}
+
+.companyName {
+  color: #fff;
+}
+
+.topPageLink button {
+  padding: 15px 50px;
+  background: #fff;
+  margin-right: 25px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* End Menu Bar */
+
+/* Footer css */
+.footer_head {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer_links svg {
+  fill: #9c9c9c;
+  margin-right: 15px;
+}
+
+.footer_links li {
+  font-size: 16px;
+  color: #9c9c9c;
+  display: flex;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: 35%;
+}
+
+.footer_social li {
+  padding: 10px 15px;
+  background: #fff;
+  width: 50px;
+  margin-right: 10px;
+  color: #0070ba;
+}
+
+.footer_social ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_contact h4 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer_contact p {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  color: #a0a0a0;
+}
+
+/* Footer css End*/
+
+/* Home Page Start */
+.wl_heading {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.wl_heading span {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #000 !important;
+  line-height: 40px;
+}
+
+.wl_cover p {
+  color: #9d9d9d;
+  font-size: 15px;
+  font-weight: 400;
+
+}
+
+.wl_cover h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.wl_icon {
+  padding: 18px;
+  background: lightblue;
+  border-radius: 35px;
+  margin: auto 20px auto 0;
+}
+
+.wl_Call {
+  padding: 20px;
+  background: lightblue;
+  border-radius: 35px;
+  margin: auto 20px auto 0;
+  background-color: #0070ba;
+  font-size: 20px;
+}
+
+.wl_Call svg {
+  font-size: 20px;
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.wl_icon img {
+  width: 40px;
+  height: 30px;
+}
+
+.wl_sub_head {
+  margin-bottom: 25px;
+}
+.cH_choose .container {
+  position: relative;
+  z-index: 10;
+}
+/* Home Page End */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -24,14 +261,40 @@
   color: white;
 }
 
+/* why choose codeharbor */
+.cH_choose {
+  background-color: #f8f8f8;
+  position: relative;
+  z-index: 10;
+
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.ch_layer {
+  background-image: url("./Images//Home/vector-dotted.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .wl_icon img {
+    width: 55px !important;
+  }
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
