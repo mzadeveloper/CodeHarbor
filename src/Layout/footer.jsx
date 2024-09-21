@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 function Footer() {
     return (
         <>
@@ -8,16 +9,16 @@ function Footer() {
                             <h3 className="footer_head">LINKS</h3>
                             <ul>
                                 <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="18px"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
-                                    <span>HOME</span>
+                                    <NavLink to="/">HOME</NavLink>
                                 </li>
                                 <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="18px"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
-                                    <span>ABOUT</span>
+                                    <NavLink to="/about">ABOUT</NavLink>
                                 </li>
                                 <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="18px"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
-                                    <span>SERVICE</span>
+                                    <NavLink to="/service">SERVICES</NavLink>
                                 </li>
                                 <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="18px"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
-                                    <span>CONTACT US</span>
+                                    <NavLink to="/contact">CONTACT US</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -49,13 +50,12 @@ function Footer() {
                 </div>
                 <div className="bg_blue">
                     <div className="container mx-auto py-3">
-                        <div className=" grid grid-cols-1 md:grid-cols-2 whiteColor">
+                        <div className=" grid grid-cols-1 md:grid-cols-2 whiteColor bluefooter">
                             <div>CodeHarbor @ 2024</div>
-                            <div className="ml-auto">Disclaimers</div>
+                            <div className="md:ml-auto">Disclaimers</div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
 

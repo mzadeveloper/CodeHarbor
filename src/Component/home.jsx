@@ -1,3 +1,4 @@
+import Header from "../Layout/Header"
 import PlannImg from "../Images/Home/Planning-icon.png"
 import DesignImg from "../Images/Home/Design-icon.png"
 import DevelopImg from "../Images/Home/developemt-icon.png"
@@ -9,9 +10,10 @@ import UXDesign from "../Images/Home/Analysis-blue-icon.png"
 import Code from "../Images/Home/web-develp-blue-icon.png"
 import SEO from "../Images/Home/SEO-blue-icon.png"
 import Graphic from "../Images/Home/graphic-design-blue-icon.png"
-function Home() {
+function Home() { 
     return (
         <>
+           <Header Name="Home"/>
             <section>
                 <div class="container mx-auto py-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:py-8 p-5">
@@ -55,7 +57,6 @@ function Home() {
                                 <div class="">
                                     <div className="mb-4 bg_black ">
                                         <a href="#" class="block max-w-sm p-6 text-center  hover:rounded-lg shadow bg-[#202020]-500">
-
                                             <div className="mb-3"><img className="mx-auto" src={PlannImg} /></div>
                                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#fff] uppercase">Planning </h5>
                                             <p class="font-normal text-[#9d9d9d] font-semibold">Here are the biggest enterprise technology acquisitions, in reverse chronological order.</p>
@@ -104,11 +105,10 @@ function Home() {
                             <p className="mb-5">In publishing and graphic design lorem ipsum is a placeholder text commonly
                                 used to demonstrate the visual form of a docoment or a typeface without relying on
                                 meaningful contant.</p>
-
                         </div>
                         <div></div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-5">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-5 serviceType">
                         <div className="mb-4 bg_white ">
                             <a href="#" class="block max-w-sm p-8 text-center  hover:rounded-lg shadow bg-[#202020]-500">
                                 <div className="mb-3"><img className="mx-auto" src={UXDesign} /></div>
@@ -145,7 +145,7 @@ function Home() {
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
                         <div className="wl_cover md:me-8 md:pe-5">
                             <img src={WL_Icone} alt="wellCome icon" />
-                            <h2 className="wl_heading blueColor">GET IN <span>TOUCH</span></h2>
+                            <h2 className="dbl_color_heading ">GET IN <span >TOUCH</span></h2>
                             <p className="mb-5">In publishing and graphic design lorem ipsum is a placeholder text commonly
                                 used to demonstrate the visual form of a docoment or a typeface without relying on
                                 meaningful contant.</p>

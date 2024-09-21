@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   container: {
     center: true,
@@ -11,6 +12,6 @@ module.exports = {
   },
   plugins: [
     require('flowbite/plugin')
-  ]
+]
 }
 

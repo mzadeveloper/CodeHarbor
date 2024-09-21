@@ -1,13 +1,13 @@
 import Header from "../Layout/Header"
 import Footer from "../Layout/footer"
-import Home from "../Component/home"
+import Routes from "../Layout/route"
 
 
 function Layout() {
   return (
     <>
-      <Header />
-      <Home />
+      {/* <Header /> */}
+      <Routes />
       <Footer/>
       
     </>

@@ -3,12 +3,10 @@
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Oswald', sans-serif;
+}
+body p {
+  font-family: 'Poppins', sans-serif;
 }
 
 code {
@@ -20,6 +18,16 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+.dbl_color_heading {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}  
+
+.dbl_color_heading span {
+  color: #0070ba !important;
+}
 .container {
   max-width: 1150px;
 }
@@ -71,13 +79,14 @@ code {
   background-color: #fff;
 }
 
-.navMenu a {
+.navMenu li {
   padding: 15px 6px;
   border-bottom: 3px solid transparent;
+  text-transform: uppercase;
   font-weight: 700;
 }
 
-.navMenu a:hover {
+.navMenu li:hover {
   border-bottom: 3px solid #0070ba;
 }
 
@@ -93,7 +102,11 @@ code {
   font-weight: 600;
   color: #fff;
 }
-
+.arrowImg {
+  position: absolute;
+  left: -60px;
+  margin-top: 5%;
+}
 .companyName h1 {
   font-size: 50px;
   font-weight: 700;
@@ -102,13 +115,13 @@ code {
 }
 
 .companyName h2 {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
 }
 
 .companyName p {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #cccdce;
 }
 
@@ -180,17 +193,39 @@ code {
 /* Footer css End*/
 
 /* Home Page Start */
+.mainTitle {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.navMenu li a {
+  padding: 15px 5px;
+  color: #303030;
+}
+.serviceType img {
+  height: 44px;
+}
 .wl_heading {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 25px;
 }
-
+span.topbar {
+  height: 5px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  background: #0071bb;
+  margin-bottom: 15px;
+}
 .wl_heading span {
   display: block;
   font-size: 40px;
   font-weight: 700;
-  font-family: sans-serif;
   color: #000 !important;
   line-height: 40px;
 }
@@ -209,7 +244,7 @@ code {
 }
 
 .wl_icon {
-  padding: 18px;
+  padding: 16px;
   background: lightblue;
   border-radius: 35px;
   margin: auto 20px auto 0;
@@ -244,6 +279,51 @@ code {
   z-index: 10;
 }
 /* Home Page End */
+
+/* Contact us */
+.contactList .contactInfo h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.contactList .contactInfo {
+  text-align: center;
+  padding: 20px;
+}
+.contactList .contactInfo p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #656565;
+}
+.sendMsg {
+  padding: 15px 30px;
+  background: #0070ba;
+  color: #fff;
+  border-radius: 0px;
+  margin-top: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contactList label {
+  font-weight: 700;
+}
+/* Contact Us Page End */
+/* Service Page Start */
+.qualitiesList h3 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.qualitiesList p {
+  color: #939393;
+  margin-bottom: 25px;
+}
+.ourValue {
+  background-color: #f8f8f8;
+  position: relative;
+  z-index: 10;
+}
+/* Service Page End */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -283,10 +363,49 @@ code {
   position: absolute;
   z-index: 0;
 }
-
+/* About Us start */
+.our_mission h4.card-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.whatwe_do {
+  background-image: url("../src/Images/AboutUs/Backgound.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.whatwe_do .card-body {
+  padding: 20px;
+  box-shadow: 0 1px 1px #ececec;
+  background: #fff;
+  margin-bottom: 40px;
+}
+.whatwe_do .card-body h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.whatwe_do .card-body p{
+  color: #aeaeae;
+}
 @media screen and (max-width: 600px) {
   .wl_icon img {
     width: 55px !important;
+  }
+  .navMenu li {
+    padding: 5px;
+    border-bottom: none;
+  }
+  
+  .navMenu li:hover {
+    border-bottom: none;
+  }
+  .topPageLink button {
+    padding: 15px 20px;
+  }
+  .bluefooter {
+    text-align: center;
   }
 }
 
