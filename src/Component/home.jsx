@@ -10,10 +10,27 @@ import UXDesign from "../Images/Home/Analysis-blue-icon.png"
 import Code from "../Images/Home/web-develp-blue-icon.png"
 import SEO from "../Images/Home/SEO-blue-icon.png"
 import Graphic from "../Images/Home/graphic-design-blue-icon.png"
-function Home() { 
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
+function Home() {
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_6ciawyc', 'template_8ud8byj', form.current, 'DE3ZOyrvcgtUyfIfk')
+      .then((result) => {
+        console.log(result.text);
+        alert("Email sent successfully!");
+      }, (error) => {
+        console.log(error.text);
+        alert("Failed to send email. Try again later.");
+      });
+  };
     return (
         <>
-           <Header Name="Home"/>
+            <Header Name="Home" />
             <section>
                 <div class="container mx-auto py-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:py-8 p-5">
@@ -149,30 +166,24 @@ function Home() {
                             <p className="mb-5">In publishing and graphic design lorem ipsum is a placeholder text commonly
                                 used to demonstrate the visual form of a docoment or a typeface without relying on
                                 meaningful contant.</p>
-
                         </div>
                         <div></div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-5">
-                        <div>
-                            <form class="max-w-sm mx-auto">
-                                <input type="text" placeholder="Full Name" class="block w-full p-4 w-100 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
-                            </form>
-                        </div>
-
-                        <div>
-                            <form class="max-w-sm mx-auto">
-                                <input type="email" placeholder="Email" class="block w-full p-4 w-100 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
-                            </form>
-                        </div>
-                        <div>
-                            <form class="max-w-sm mx-auto">
-                                <input type="text" placeholder="Message" class="block w-full p-4 w-100 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
-                            </form>
-                        </div>
-                        <div>
-                            <button type="button" style={{width:"100%"}} class="px-6 w-100 py-3.5 text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit Now</button>
-                        </div>
+                    <div class="">
+                        <form class=" mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 p-5" ref={form} onSubmit={sendEmail}>
+                            <div>
+                                <input type="text" placeholder="Full Name" name="user_name" class="block w-full py-3.5 w-100 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email" name="user_email" class="block w-full py-3.5 w-100 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Message" name="user_message" class="block w-full py-3.5 w-100 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></input>
+                            </div>
+                            <div>
+                                <button type="submit" style={{ width: "100%" }} class="px-6 w-100 py-3.5 text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit Now</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

@@ -11,13 +11,18 @@ import ArrowBottom from "../Images/Home/arrow-icon.png"
 
 function Header(page) {
     const [openNav, setOpenNav] = useState(true);
-    console.log("PageName", page)
+    const handleScroll = () => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: 'smooth',
+        });
+      };
     return (
         <>
             <div className="mainbanner bgImg_banner w-100 py-5 " >
                 <div class="container mx-auto md:py-5 md:px-0 py-5 px-5" >
                     <div className="topBar md:mb-6 mb-3">
-                        <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
+                        <div class="grid grid-cols-3 md:grid-cols-6 gap-5">
                             <div class="topLogo col-span-3">
                                 <img src={TopBarLogo} alt="Logo" />
                             </div>
@@ -79,7 +84,7 @@ function Header(page) {
                                     </nav>
                                 </div>
                                 <div className="top_Contactbtn sm:block hidden" >
-                                    <h2>Contact Us</h2>
+                                    <h2><NavLink to="/contact">Contact Us</NavLink></h2>
                                 </div>
                             </div>
                         </div>
@@ -95,9 +100,9 @@ function Header(page) {
                                         <h1 className="">PROVIDER <span className="blueColor">COMPANY</span></h1>
                                         <p className="md:mb-8 mb-4">In publishing and graphic design and Use these Tailwind CSS navbar components to help users get around your application with responsive navigation bars featuring search bars, menus, and quick action buttons. </p>
                                         <div className=" topPageLink relative">
-                                            <img className="arrowImg md:block hidden" src={ArrowBottom} alt="" />
-                                            <button className="md:mt-6">ABOUT US</button>
-                                            <button className="bg_blue whiteColor md:mt-6">OUR SERVICE</button>
+                                            <img className="arrowImg md:block hidden " onClick={handleScroll} src={ArrowBottom} alt="" />
+                                            <button className="md:mt-6"><NavLink to="/about">ABOUT US</NavLink></button>
+                                            <button className="bg_blue whiteColor md:mt-6"><NavLink to="/service">OUR SERVICE</NavLink></button>
                                         </div>
                                     </div>
                                     <div></div>
